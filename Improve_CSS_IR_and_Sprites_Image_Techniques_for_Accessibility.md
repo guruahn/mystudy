@@ -30,7 +30,7 @@
 ### 배경이미지 크기 조정을 위한 Polyfill
 CSS3를 지원하지 않는 브라우저에서 배경이미지의 크기를 조정하기 위해서는 background-size polyfill을 사용해야합니다. polyfill이란 의미는 어떤 기능을 제공하는 소스코드의 한계(브라우저 호환성)을 메우기 위한 대체코드를 말합니다. 
 
-1.IE8을 위한 polyfill로 Begavior 속성이 있습니다.
+1.IE8을 위한 polyfill로 Behavior 속성이 있습니다.
 
     #carousel li {
         display: none;
