@@ -12,4 +12,24 @@ In this article, I’ll cover the basics of their grids. First, I’ll show you 
 
 ##미디어 쿼리
 
-Bootstrap과 Foundation의 그리드 시스템을 분석하기 전에 먼저 
+Before analyzing Bootstrap’s and Foundation’s grid structure, let’s first look at the breakpoints that both offer for responsive layouts. These are used to set the number of the available grids that each framework offers. Bootstrap과 Foundation의 그리드 시스템을 분석하기 전에 먼저 각각이 제공하는 중단점을 살펴보자. 중단점은 각 프레임워크에서 제공하는 그리드를 설정하는데 사용된다.
+
+Bootstrap specifies four pixel-based media query breakpoints. The table below shows them: Bootstrap은 픽셀 기반의 미디어쿼리 중단점을 4가지 제공한다. 아래 테이블을 보면:
+
+|       Screens       |  Viewport Size | Container Width | Class Prefix |
+|:-------------------:|:--------------:|:---------------:|:------------:|
+| Extra small screens |    ＜ 768px    |       auto      |   .col-xs-*  |
+|    Small screens    |    ≥ 768px    |      750px      |   .col-sm-*  |
+|    Medium screens   |    ≥ 992px    |      970px      |   .col-md-*  |
+|    Large screens    |    ≥ 1200px   |      1170px     |   .col-lg-*  | 
+
+Foundation includes five em-based media queries. These are shown in the following table: Foundation은 em 기반의 미디어쿼리 중단점을 5가지 제공한다. 아래 테이블을 보면 : 
+
+|     Screens     |     Viewport Size    | Class Prefix (Default Grid) | Class Prefix(Block Grid) |
+|:---------------:|:--------------------:|:---------------------------:|:------------------------:|
+|  Small screens  |        ＜ 768px       |     .small-* .column(s)     |    .small-block-grid-*   |
+|  Medium screens |        ≥ 768px       |     .medium-* .column(s)    |   .medium-block-grid-*   |
+|  Large screens  |        ≥ 992px       |     .large-* .column(s)     |    .large-block-grid-*   |
+|  XLarge screens |       ≥ 1200px       |        Not Activated        |       Not Activated      |
+| XXLarge screens | ≥ 120.063em (1921px) |        Not Activated        |       Not Activated      |
+
