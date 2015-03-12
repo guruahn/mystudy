@@ -14,7 +14,7 @@ by [DAN CEDERHOLM](http://alistapart.com/author/dancederholm)
 
 The Sass elevator pitch
 
-말하자면 당신의 스타일시트를 바꿔야한다고 했을 때 그 값을 여러번 찾기 바꾸기를 해왔습니까? CSS에서 아래와 같은 방식을 바라지 마십시요.
+말하자면 당신의 스타일시트를 바꿔야한다고 했을 때 그 값을 여러번 찾기 바꾸기를 해왔나요? CSS에서 아래와 같은 방식을 기대하기는 힘듭니다.
 
 	$brand-color: #fc3;
 	a{
@@ -37,7 +37,7 @@ The Sass elevator pitch
 		line-height: 1.5;
 	}
 
-재사용 가능한 블록안에 공유 규칙을 넣으면 환상적이지 않을까요? 다시말하면, 단 한번의 정의로 그것이 필요한 모듯 곳에 넣을 수 있는 닙니다.
+재사용 가능한 블록안에 공유 규칙을 넣으면 환상적이지 않을까요? 다시말하면, 단 한번의 정의로 그것이 필요한 모듯 곳에 넣을 수 있는 것입니다.
 
 	@mixin default-type {
 		margin-bottom: 20px;
