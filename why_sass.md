@@ -12,7 +12,7 @@ by [DAN CEDERHOLM](http://alistapart.com/author/dancederholm)
 
 그래서 나는 Sass가 여러분의 프로세스와 작업흐름에 방해가  되지 않고 여러분의 삶을 더 쉽게 만드는지 보여주려고 합니다. 나는 Sass의 여러 측면, 어떻게 설치하고 어떻게 사용하고 어떻게 우리의 프로젝트에서 나를 도와주는지에 대해 데모를 보여줄 것입니다. 뿐만 아니라 운이 좋다면 나는 여러분이  Sass의 신자가 되게 할 수도 있습니다.
 
-The Sass elevator pitch
+#The Sass elevator pitch
 
 말하자면 당신의 스타일시트를 바꿔야한다고 했을 때 그 값을 여러번 찾기 바꾸기를 해왔나요? CSS에서 아래와 같은 방식을 기대하기는 힘듭니다.
 
@@ -53,7 +53,7 @@ The Sass elevator pitch
 
 역시 Sass에서 가능합니다! 그리고 이 두 극단적으로 단순한 예제는 어떻게 Sass가 스타일시트 제작을 더 빠르고 쉽고 유연하게 만들 수 있는 방법을 힐끗 보여줄 뿐입니다.
 
-CSS is hard
+#CSS is hard
 
 Let’s face it: learning CSS isn’t easy. Understanding what each property does, how the cascade works, which browser supports what, the selectors, the quirks, and so forth. It’s not easy. Add on top of that the complexity of the interfaces we’re building these days, and the maintenance that goes along with that and—wait, why are we doing this again? It’s a puzzle, and some of us enjoy the eventual completion.
 
@@ -68,4 +68,17 @@ Our stylesheets are also immensely repetitive. Colors, fonts, oft-used groupings
 또한 우리의 스타일시트는 매우 반복적입니다. 색상, 폰트, 자주 사용되는 속성 그룹들, 등등. 일반적인 CSS 파일은 극단적으로 선형적인 문서입니다—이것은 객체 지향 프로그래머가 머리를 쥐어 뜯게 만드는 것입니다. (나는 객체 지향 프로그래머는 아니지만 머리가 조금밖에 남아있지 않습니다. 머리얘기는 너무 진지하게 받아들이지 마시길.) 
 As interfaces and web applications become more robust and complex, we’re bending the original design of CSS to do things it never dreamed of doing. We’re crafty like that. Fortunately, browser makers adopt new CSS features far more rapidly these days, with more efficient and powerful properties and selectors that solve the problems today’s web poses. Features like new layout options in CSS3, border-radius, box-shadow, advanced selectors, transitions, transforms, animation, and so on. It’s an exciting time. And yet, there’s still a lot missing from CSS itself. There are holes to be plugged, and the life of a stylesheet author should be a lot easier.
 
-인터페이스와 웹 어플리케이션들이 점점 견고해지고 복잡해짐으로서 우리는 원래 CSS가 할 수 없었던 일들을 구현하기위해 본래의 CSS 디자인을 왜곡시키고 있습니다. 운이 좋게도 브라우저 업체들은 오늘날 웹상에서의 새로운 문제들을 해결하기위한 효과적이고 강력한 속성과 선택자들과 함께 새로운 CSS 기능들을 더 빠르게 채택하고 있습니다. 그 새로운 기능들은 CSS3의 새로운 옵션들, border-radious, box-shadow, advanced selectors, transitions, transforms, animation 등등이 있습니다. 
+인터페이스와 웹 어플리케이션들이 점점 견고해지고 복잡해짐으로서 우리는 원래 CSS가 할 수 없었던 일들을 구현하기위해 본래의 CSS 디자인을 왜곡시키고 있습니다. 운이 좋게도 브라우저 업체들은 오늘날 웹상에서의 새로운 문제들을 해결하기위한 효과적이고 강력한 속성과 선택자들과 함께 새로운 CSS 기능들을 더 빠르게 채택하고 있습니다. 그 새로운 기능들은 CSS3의 새로운 옵션들, border-radious, box-shadow, advanced selectors, transitions, transforms, animation 등등이 있습니다. 매우 흥분되는 일입니다. 그리고 아직 여전히 CSS 자체에서 누락된 것들이 많습니다. 
+
+##THE DRY PRINCIPLE 
+##DRY 원리
+
+If we peer into the world of software engineering (and I much prefer to peer than hang out and get comfortable there), we can quickly see how organization, variables, constants, partials, etc., are an ingrained, crucial way of working for folks building complex systems.
+
+만약 우리가 소프트웨어 엔지니어링의 세계를 통해 본다면 우리는 복잡한 시스템을 세우는 사람들의 작업에 어떻게 구조, 변수, 상수, 등이 베어있는지를 쉽게 알 수 있을 것입니다.
+
+You may have heard of the “don’t repeat yourself” (DRY) principle. Coined and defined by Andy Hunt and Dave Thomas in their book, The Pragmatic Programmer (http://bkaprt.com/sass/1/), DRY declares:
+
+여러분은 “don’t repeat yourself”(DRY) 원리를 들어본적이 있을지도 모르겠습니다. Dry 선언은 Andy Hunt와 Dave Thomas가 그들의 책 The Pragmatic Programmer([http://bkaprt.com/sass/1/](http://bkaprt.com/sass/1/))에서 새롭게 정의한 것입니다:
+
+	Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
