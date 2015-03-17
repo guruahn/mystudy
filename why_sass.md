@@ -82,3 +82,63 @@ You may have heard of the “don’t repeat yourself” (DRY) principle. Coined 
 여러분은 “don’t repeat yourself”(DRY) 원리를 들어본적이 있을지도 모르겠습니다. Dry 선언은 Andy Hunt와 Dave Thomas가 그들의 책 The Pragmatic Programmer([http://bkaprt.com/sass/1/](http://bkaprt.com/sass/1/))에서 새롭게 정의한 것입니다:
 
 	Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
+
+	모든 지식의 조각은 시스템 내에서 단 하나의, 명확하고 권위있는 표현이어야 한다.
+
+The idea is that duplicating code can cause failure and confusion for developers ([http://bkaprt.com/sass/2/](http://bkaprt.com/sass/2/)). It’s common sense as well: write commonly-repeated patterns once, and reuse those bits throughout the application. It’s more efficient and far easier to maintain code this way.
+
+이 생각은 중복 코드가 개발자들에게 실패와 혼란을 야기할 수 있음을 말합니다([http://bkaprt.com/sass/2/](http://bkaprt.com/sass/2/)). 이것은 상식이기도 하다: 반복되는 패턴은 한 번만 작성하고 이 조각을 어플리케이션 안에서 재사용하십시요. 이 방법이 코드를 유지하는데 더 효율적이고 쉽습니다.
+
+CSS is anything but DRY. At times, it drips with repeated rules, declarations, and values. We’re constantly writing the same snippets of code for colors, fonts, and frequently-used patterns of style throughout our stylesheets. One look through a decent-sized CSS file, and a DRY software developer will weep, first with bewilderment, then frustration.
+
+[프로그래밍에 비하면]CSS는 아무것도 아닐 수 있지만 CSS는 DRY적 입니다. CSS는 반복되는 규칙, 선언, 값들로 넘쳐납니다. 우리는 색상, 폰트, 자주 사용되는 스타일 패턴들을 위한 동일한 코드조각들을 끊임없이 작성합니다. 적당한 크기의 CSS파일을 한 번 보면 DRY 소프트웨어 개발자는 울거예요. 처음에는 어리둥절하다가 혼란에 빠집니다.
+
+“How the !@#$ do you maintain this?!” they’ll ask.
+
+“너 썅 이거 어떻게 유지보수 하는 거니”라고 그들은 물어올 겁니다.
+
+“Have I also told you about IE bugs?” you’ll reply with a bit of self-loathing.
+
+“내가 너에게 IE버그들에 대해서도 말한적이 있니?” 여러분은 약간 자조적인 답변을 하겠지요.
+
+##SO WHY IS CSS SO DIFFICULT TO WORK WITH? 왜 CSS 작업은 어려운가?
+
+We can gather a hint of understanding why CSS has had its syntax limitations over the years from an essay by CSS co-inventor, Bert Bos (http://bkaprt.com/sass/3/):
+
+우리는 CSS 공동 발명자 Bert Bos가 쓴 에세이([http://bkaprt.com/sass/3/](http://bkaprt.com/sass/3/))로부터 왜 CSS가 지난 수 년간 구문 한계를 가지고 있었는지를 이해할 수 있는 힌트를 얻을 수 있습니다.
+
+	CSS stops short of even more powerful features that programmers use in their programming languages: macros, variables, symbolic constants, conditionals, expressions over variables, etc. That is because these things give power-users a lot of rope, but less experienced users will unwittingly hang themselves; or, more likely, be so scared that they won’t even touch CSS. It’s a balance. And for CSS the balance is different than for some other things.
+
+	CSS는 프로그래머가 그들의 프로그래밍 언어에서 사용하는 좀 더 강력한 기능들까지 도입하는 것을 꺼려했습니다: 매크로, 변수, 상수, 조건문 등등. 그 기능들이 파워유저들을 많이 구원해줄 수는 있으나 더 경험이 적은 유저들에게는 스스로 목을 메는 꼴이 될 거라는 이유때문입니다; 또는 겁을먹고 CSS를 건드리기 무서워 할 가능성이 많습니다. 그것은 균형입니다. 그리고 CSS에 대해서 그 균형은 다른 것들과는 조금 다릅니다.
+
+The original architects of CSS were concerned with adoption. They (rightfully) wanted as many people as possible creating websites. They wanted CSS to be powerful enough to style web pages and separate content from presentation, while being easy to understand and use. I can certainly respect that. At the same time, we have work to do, and that work is getting more complicated, more nuanced, and more challenging to maintain and to future-proof. CSS의 원래 설계자들은 많은 사람들에게 채택되는데에 더 관심이 많았습니다. 그들은 가능한한 더 많은 사람들이 웹사이트를 만들 수 있기를 원했습니다. 그들은 CSS가 이해하기 쉽고 사용하기 쉬우면서도, 웹페이지에 스타일을 입히고 내용과 표현을 분리하는 작업을 하는데 강력한 도구가 되기를 바랬습니다. 저는 그점을 확실히 존중할 수 있습니다. 동시에 우리는 일을 하고 있고 그 일은 점점 더 복잡미묘해지고,  유지와 미래경쟁력을 위해 더 노력해야합니다.
+
+Fortunately, there are options to help us out here, and one of them is Sass.
+
+다행이도 그것을 도와주는 여러 옵션들이 있고 그 중 하나가 Sass입니다.
+
+#What is Sass?
+
+Sass is a CSS preprocessor—a layer between the stylesheets you author and the .css files you serve to the browser. Sass (short for Syntactically Awesome Stylesheets) plugs the holes in CSS as a language, allowing you to write DRY code that’ll be faster, more efficient, and easier to maintain.
+
+Sass는 CSS 전처리기 입니다— 여러분이 만든 스타일시트와 브라우저에 전송되는 .css파일 사이의 층입니다. Sass(Syntactically Awesome Stylesheets)는 더 빠르고 효율적이고 쉽게 유지하게하는 DRY코드를 작성할 수 있도록 CSS와 결합하여 사용하는 언어입니다.
+
+The Sass website ([http://sass-lang.com/](http://sass-lang.com/)) describes itself succinctly:
+
+Sass 웹사이트([http://sass-lang.com/](http://sass-lang.com/))에서는 자신을 다음과 같이 간결하게 설명합니다:
+
+	Sass is a meta-language on top of CSS that’s used to describe the style of a document cleanly and structurally, with more power than flat CSS allows. Sass both provides a simpler, more elegant syntax for CSS and implements various features that are useful for creating manageable stylesheets.
+
+	Sass는 CSS 상위에 있는 메타 언어입니다. 그것은 CSS가 허용하는 것 보다 더 강력하게 문서를 깔끔하고 구조적으로 표현하는데 사용합니다. Sass는 더 단순하고 우아한 구문작성을 가능하게 하고 관리 가능한 스타일 시트를 만드는데 유용한 다양한 기능들을 구현할 수 있습니다. 
+
+So while normal CSS doesn’t yet allow things like variables, mixins (reusable blocks of styles), and other goodies, Sass provides a syntax that does all of that and more—enabling “super functionality” in addition to your normal CSS. It then translates (or compiles) that syntax into regular ol’ CSS files via a command-line program or web-framework plugin.
+
+일반 CSS가 재사용 가능한 스타일 블록을 심어 넣을 수 있는 변수와 다른 좋은 기능들을 허용하지 않는데 반하여 Sass는 일반 CSS가 그런 슈퍼 기능들이 가능하도록하는 모든 것들을 수행하는 구문을 제공합니다. Sass는 command-line 프로그램이나 웹 프레임워크 플러그인을 통해 그 구문을 일반 CSS파일로 번역(혹은 컴파일)합니다.
+
+More specifically, Sass is an extension of CSS3, and its SCSS (“Sassy CSS”) syntax—which we’ll talk about in just a moment—is a superset of CSS3. Meaning, any valid CSS3 document is a valid SCSS document as well. This is integral to Sass being something you can “ease into.” Getting started with Sass syntax is painless, and you can use as little or as much as you’d like. Which also means converting an existing stylesheet from CSS to SCSS can be done in stages, as you learn and pick up more of Sass’s functionality.
+
+더 구체적으로는 Sass는 CSS3의 확장이며 SCSS(“Sassy CSS”)라고 부르는 CSS3의 상위 집합입니다. 어떤의미냐면, 유효한 CSS3문서는 모두 유효한 SCSS문서라는 것입니다.  Sass 구문을 시작하는 것은 고통스럽지 않습니다. 원하는 만큼 적게 혹은 많이 사용할 수도 있습니다. 
+
+Later, when you’ve become fluent with Sass (and it won’t take long), it really does feel like a natural extension of CSS—as if it’s filling holes we all wish were filled by the CSS spec itself. This is why, once I started using Sass, I never once thought it was awkward or laborious—it just feels like CSS should feel. Once you try it, you’ll likely stick with it permanently.
+
+Furthermore, Sass is helping CSS get better. By fast-tracking certain features that aren’t currently possible without the help of a preprocessor, it’s giving CSS authors real-world implementation and feature experimentation. When and if it makes sense, certain Sass functionality could very well inform future CSS specifications.
