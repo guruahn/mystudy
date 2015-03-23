@@ -4,11 +4,11 @@
 
 AngularJS has become one of the most popular open source JavaScript frameworks in the world of web application development. Since its inception, it has witnessed phenomenal growth in terms of adoption and community support—both from individual developers and corporations. 
 
-AngularJS는 웹 어플리케이션 세계에서 자바스크립트 프레임워크 중 가장 인기있는 오픈소스중 하나가 되었습니다. 그것이 시작된 이래, 개인과 독립 사업자 둘 모두의 커뮤니티와 채택이라는 측면에서 경이로운 성장을 입증했습니다. 
+AngularJS는 웹 어플리케이션 세계에서 자바스크립트 프레임워크 중 가장 인기있는 오픈소스중 하나가 되었습니다. AngularJS가 시작된 이래, 개인과 독립 사업자 둘 모두의 커뮤니티 지원과 채택이라는 측면에서 경이로운 성장을 입증했습니다. 
 
 From humble beginnings, Angular has matured into a client-side MVW framework (that’s Model-View-Whatever) for the building of complex single-page applications. It places equal importance on application testing and application writing, while simplifying the development process.
 
-ANgularJS는 복잡한 단일 페이지 어플리케이션을 구축하기위한 클라이언트 측 MVW(Model-View-Whatever) 프레임워크로 성숙해갔습니다. 개발프로세스가 단순화 되면서 어플리케이션 테스트와 작성 둘 모두를 중요한 것으로 자리매김 시킵니다.
+AngularJS는 복잡한 단일 페이지 어플리케이션을 구축하기위한 클라이언트 측 MVW(Model-View-Whatever) 프레임워크로 성숙해갔습니다. 개발프로세스가 단순화 되면서 어플리케이션 테스트와 작성 둘 모두를 중요한 것으로 자리매김되었습니다.
 
 The current version of Angular is 1.3. This version is both stable and performant and is used by Google (the framework’s maintainers) to power a great many of their applications (it’s estimated that that there are over 1600 apps inside of Google running on Angular 1.2 or 1.3).
 
@@ -16,7 +16,7 @@ Angular의 현재 버전은 1.3입니다. 이 버전은 안정적이고 그것�
 
 Angular 2.0 was officially announced at the ng-conference in October, 2014. This version won’t be a complex major update, rather a rewrite of the entire framework and will include breaking changes!
 
-Angular 2.0은 공식적으로 2014년 10월 ng-conference에서 발표되었습니다. 이 버전은 복잡한 주요 업데이트라기 보다는 전체 프레임워크를 제작성한것이며 단절적인 변화를 포함할 것입니다.
+Angular 2.0은 공식적으로 2014년 10월 ng-conference에서 발표되었습니다. 이 버전은 복잡한 주요 업데이트라기 보다는 전체 프레임워크를 제작성한것이며 [이전 버전과의]단절적인 변화를 포함할 것입니다.
 
 #Why Angular 2.0? 왜 Angular 2.0인가?
 
@@ -24,7 +24,7 @@ Before getting into further discussion about Angular 2.0 (which has an estimated
 
 Angular 2.0에 대해 자세한 논의에 들어가기 전에 새 버전의 뒤에 있는 철학에 대해 간단히 살펴보겠습니다.(이 새 버전은 2015년 말 쯤 출시가 예상됩니다.) Angular 2.0 개발은 다음의 문제를 다루기 시작했습니다:
 
-##Mobile
+##Mobile 모바일
 
 The new Angular version will be focused on the development of mobile apps. The rationale is that it’s easier to handle the desktop aspect of things, once the challenges related to mobile (performance, load time, etc.) have been addressed.
 
@@ -36,7 +36,7 @@ Various modules will be removed from Angular’s core, resulting in better perfo
 
 성능 개선의 결과로 다양한 모듈들이 Angular의 핵심에서 제거될 것입니다. 계속 증가하는 Angular의 모듈 생태계에서 여러분이 원하는 부분을 선택하고 가져올 수 있을 것입니다.
 
-##Modern 현대화
+##Modern
 
 Angular 2.0 will target ES6 and “evergreen” modern browsers (those automatically updated to the latest version). Building for these browsers means that various hacks and workarounds that make Angular harder to develop can be eliminated allowing developers to focus on the code related to their business domain.
 
@@ -56,11 +56,11 @@ AtScript is a superset of ES6 and it’s being used to develop Angular 2.0. It�
 
 AtScript는 ES6의 확대집합이며 Angular 2.0을 개발하는데 사용되었습니다. 이것은 ES5 코드를 생성하기 위해 Traceur 컴파일러로 처리되며 컴파일 시간 체크 대신 런타임 형식 (진위형)구문을 생성하는 데 TypeScript의 형식 구문을 사용합니다. 그러나 AtScritp는 필수가 아닙니다—여러분은 여전히 Angular 어플리케이션을 작성하기 위해 AtScrit 대신 일반 자바스크립트/ES5 코드를 사용할 수 있습니다.
 
-##Improved Dependency Injection (DI) 의존성 주입 향상
+##Improved Dependency Injection (DI) 향상된 의존성 주입(DI)
 
 Dependency injection (a software design pattern in which an object is passed its dependencies, rather than creating them itself) was one of the factors that initially differentiated Angular from its competitors. It is particularly beneficial in terms of modular development and component isolation, yet its implementation was plagued with problems in Angular 1.x. Angular 2.0 will will address these issues, as well as adding missing features such as child injectors and lifetime/scope control.
 
-의존성 주입(그 자신 자체가 아니라 객체에 의존성을 전달하는 소프트웨어 디자인 패턴입니다)은 Angular의 다른 경쟁자들과 근본적으로 다른 이유중 하나입니다. 이것은 특히 모듈개발과 컴포넌트 분리의측면에서 유리합니다. 그러나 Angular 1.x에서 이것을 구현하는 데에 문제가 많았습니다. Anuglar 2.0은 이런 문제를 해결할 뿐만 아니라 자식요소 주입, lifetime/scope 제어와 같은 기능들도 추가될겁니다.
+의존성 주입(그 자신 자체가 아니라 객체에 의존성을 전달하는 소프트웨어 디자인 패턴입니다)은 Angular의 다른 경쟁자들과 근본적으로 다른 이유중 하나입니다. 이것은 특히 모듈개발과 컴포넌트 분리의 측면에서 유리합니다. 그러나 Angular 1.x에서 이것을 구현하는 데에 문제가 많았습니다. Anuglar 2.0은 이런 문제를 해결할 뿐만 아니라 자식요소 주입, lifetime/scope 제어와 같은 기능들도 추가될겁니다.
 
 ###Annotations 주석석
 
