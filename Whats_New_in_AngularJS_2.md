@@ -129,36 +129,50 @@ The initial Angular router was designed to handle just a few simple cases, yet a
 
 Now, let’s check out the features which make the improved router a catalyst to take Angular 2.0 to new heights.
 
+이제 Angular 2.0을 새로운 차원으로 향상시키는 촉매제인 개선된 라우터의 기능들을 살펴보겠습니다.
 
-
-##Child Router
+##Child Router 자식 라우터
 
 The child router will convert each component of the application into a smaller application by providing it with its own router. It will help encapsulate entire feature sets of an application.
 
-##Screen Activator
+자식 라우터는 자기 자신의 라우터에 함께 제공됨으로서 더 작은 애플리케이션에 그 애플리케이션의 각 컴포넌트를 변환할 것입니다.
+
+##Screen Activator 스크린 활성자
 
 This will give developers finer control over the navigation lifecycle, via a set of can* callbacks:
+이것은 can* 콜백함수 세트들을 통해 탐색 주기 전반에 거처 더 훌륭한 제어를 개발자들에게 제공할 것입니다.
 
  -canActivate – Allow/Prevent navigating to the new controller.
  -activate – Respond to successful navigation to the new controller.
  -canDeactivate – Allow/Prevent navigation away from the old controller.
  -deactivate – Respond to successful navigation away from the old controller.
- -These callbacks will allow the developer to return Boolean values, a Promise for that value, or a Navigation Command (for a lower level control).
+
+These callbacks will allow the developer to return Boolean values, a Promise for that value, or a Navigation Command (for a lower level control).
 
 ##Design
 
 All of this logic is built using a pipeline architecture which makes it incredibly easy to add one’s own steps to the pipeline or remove default ones. Moreover, its asynchronous nature will allow developers to a make server request to authenticate a user or load data for a controller, while still in the pipeline.
 
+이 모든 로직은 파이프라인 아키텍쳐 통해 구축됩니다. 파이프라인 아키텍쳐는 놀라울 정도로 쉽게 자기 자신의 단계를 파이프라인에 추가하거나 제거할 수 있도록 해줍니다. 더 나아가 이것의 비동기적인 천성은 파이프라인에 있는 동안 사용자 인증을 위해 서버 요청을 하거나 콘트롤러에 데이터를 로드할 수 있도록 합니다.
+
 #Logging
 
 Angular 2.0 will contain a logging service called diary.js—a super useful feature which measures where time is spent in your application (thus enabling you to identify bottlenecks in your own code).
+
+Angular 2.0은 diary.js라고 부르는 로깅 서비스를 포함할 것입니다—이것은 여러분의 애플리케이션에서 소요되는 시간을 측정하는 매우 유용한 이 기능입니다(이것으로 여러분의 코드에서 병목현상을 인지 가능하게 됩니다.).
 
 #Scope
 
 $scope will be removed in Angular 2.0 in favor of ES6 classes.
 
-#Conclusion
+$scope는 ES6 클래스들에 우호적인 Angular 2.0에서는 제거될 예정입니다.
+
+#Conclusion 결론
 
 There is a lot of excitement and buzz around Angular 2.0 at the moment and this will only heighten as its release date nears. The beginning of March will see the next ng-conf take place where it’s likely that more details of the next version will emerge.
 
+지금 Angular 2.0을 둘러싸고 흥분과 들뜬 분위기가 느껴지집니다. 출시일이 가까워 질수록 고조되겠지요. 3월 초에 다음 ng-컨퍼런스가 열릴 장소를 볼 수 있을 것입니다. 그곳에서 다음 버전에 대한 자세한 내용이 등장할 가능성이 높습니다.
+
 Meanwhile opinion remains divided as to whether breaking change is a good thing. Proponents claim there are hard limits on the improvements that can be made to 1.x, whilst opponents are understandably nervous at the apparent lack of a migration plan.
+
+한편 이 단절적인 변화가 좋은 것인지에 대한 의견이 나뉘어지겠지요. 마이크레이션 계획의 명백한 부족에 반대자들이 이해할만한 걱정을 하는 동안 지지자들은 1.x로 뭔가를 개선하기에는 심각한 한계가 존재한다고 주장합니다.
