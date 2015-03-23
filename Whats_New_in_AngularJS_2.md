@@ -1,6 +1,7 @@
 #What’s New in AngularJS 2.0
 
 원문 : [What’s New in AngularJS 2.0](http://www.sitepoint.com/whats-new-in-angularjs-2/)
+번역 : [공잠](http://gongjam.co.kr)
 
 AngularJS has become one of the most popular open source JavaScript frameworks in the world of web application development. Since its inception, it has witnessed phenomenal growth in terms of adoption and community support—both from individual developers and corporations. 
 
