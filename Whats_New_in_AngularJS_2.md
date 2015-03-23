@@ -101,14 +101,14 @@ Angular 2.0에서 템플릿 컴파일 과정은 비동기적일 것입니다. �
 
 ###Directives 디렉티브
 
-In Angular 2.0 there will be three kinds of directives: Angular 2.0에서는 세 가지 종류의 디렉트브들이 있을 것입니다.
+In Angular 2.0 there will be three kinds of directives: Angular 2.0에서는 세 가지 종류의 디렉티브들이 있을 것입니다.
 
  - Component Directives – These will create reusable components by encapsulating logic in JavaScript, HTML or an optional CSS style sheet.
  - 컴포넌트 디렉티브 - 이것은 자바 스크립트, HTML 또는 선택 사양 인 CSS 스타일 시트에 로직을 캡슐화하여 재사용 가능한 구성 요소를 작성합니다.
  - Decorator Directives – These directives will be used to decorate elements (for example adding a tooltip, or showing/hiding elements using ng-show/ng-hide).
  - 장식적 디렉티브 - 이 디렉티브는 (툴팁이나 ng-show/ng-hide를 사용한 토글 요소와 같은) 장식적인 요소들을 사용하게 될 것입니다.
  - Template Directives – These will turn HTML into a reusable template. The instantiating of the template and its insertion into the DOM can be fully controlled by the directive author. Examples include ng-if and ng-repeat.
- - 템플릿 디렉티브 - 이것은 HTML을 제사용 가능한 템플릿으로 변환할 것입니다. 템플릿을 인스턴스화하고 그것을 DOM에 주입하는 것이 완전히 디렉티브 작성자에 의해 컨트롤되어질 것입니다. 예를 들면 ng-if 및 ng-repeat을 포함됩니다.
+ - 템플릿 디렉티브 - 이것은 HTML을 제사용 가능한 템플릿으로 변환할 것입니다. 템플릿을 인스턴스화하고 그것을 DOM에 주입하는 것이 완전히 디렉티브 작성자에 의해 컨트롤되어질 것입니다. 예를 들면 ng-if 및 ng-repeat가 포함됩니다.
 
 #Routing Solution 라우팅 솔루션
 
