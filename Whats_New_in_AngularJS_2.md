@@ -31,7 +31,7 @@ The new Angular version will be focused on the development of mobile apps. The r
 
 새 버전은 모바일 앱 개발에 초점을 맞출 것입니다. 그 근거는 모바일(성능, 로드 시간 등)에 관련된 이슈들이 해결된 이후에 테스크탑 측면이 다뤄지기 더 쉬울거라는 점입니다.
 
-##Modular 모됼
+##Modular 모듈
 
 Various modules will be removed from Angular’s core, resulting in better performance. These will find their way into Angular’s ever-growing ecosystem of modules, meaning you’ll be able to pick and choose the parts you need.
 
