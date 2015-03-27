@@ -47,3 +47,23 @@ This can also work very conveniently for some important clients that display the
 
 ![gmail app](https://dl.dropboxusercontent.com/u/38351999/witinweb/blog/1425382024gmail_app.png)
 
+#3. Resize fonts and images 픈트와 이미지들의 크기를 재조정할것.
+
+This topic only applies to devices that support media queries. Unfortunately, we can't do anything for the others: sometimes they resize text and images themselves, but we can't really control this behaviour.
+이 주제는 오직 미디어 쿼리를 지원하는 기기에만 적용됩니다. 불행하게도 우리는 다른 기기들을 위해서는 아무것도 할 수 없습니다: 때때로 그것들은 자동으로 텍스트와 이미지들을 조정하지만 우리가 그것을 컨트롤할 수 없습니다.
+
+Media queries are currently supported by all IOS devices, the Android native email App (with some issues and remembering that Lollipop dropped it in favor of Gmail App), the newest Blackberry phones and a handful of others (for a more complete list, take a look at Campaign Monitor Guide to CSS or FreshInbox Email Client Media Query and Embedded Styles Support 2014).
+
+Together they correspond to a significant and continuously growing percentage of email clients, so it's really mandatory to take care of them.
+
+IOS devices have two main issues with font and image size:
+
+Small font sizes are enlarged by default
+Email width is based on the largest element
+Font-size enlargement is usually not a critical problem, but in some cases it may cause some lines of text to be spliced potentially breaking your layout.
+
+This can be easily fixed adding this line to your CSS:
+
+1
+* { -webkit-text-size-adjust: none; }
+In the screenshot below you can see how the text size in the red area can change adding the -webkit-text-size-adjust rule (on the left) or removing it (on the right).
