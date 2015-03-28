@@ -71,9 +71,9 @@ Font-size enlargement is usually not a critical problem, but in some cases it ma
 
 This can be easily fixed adding this line to your CSS:
 이 문제는 여러분의 CSS에 아래 줄을 추가함으로서 쉽게 고칠 수 있습니다.
-
+```
     * { -webkit-text-size-adjust: none; }
-
+```
 In the screenshot below you can see how the text size in the red area can change adding the -webkit-text-size-adjust rule (on the left) or removing it (on the right).
 아래 스크린 샷에서 위 코드를 삽입한 경우(왼쪽)과 하지 않은 경우(오른쪽) 발간 영역안의 텍스트 사이즈가 어떻게 달라지는지 볼 수 있습니다.
 
